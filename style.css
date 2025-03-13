@@ -224,7 +224,7 @@ a:hover {
         >div {
             width: 80%;
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             gap: 1rem;
             >img{
                 display: block;
@@ -232,5 +232,28 @@ a:hover {
                 /* height: 20%; */
             }
         }
+    }
+
+    .hero-container{
+        flex-direction: column;
+    }
+}
+
+#brands{
+    font-size: medium;
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    flex-wrap: wrap;
+    font-weight: 500;
+
+    >div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4rem;
+        flex-wrap: wrap;
     }
 }
