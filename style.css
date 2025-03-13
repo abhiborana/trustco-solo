@@ -31,12 +31,18 @@ h4,
 h5,
 h6 {
     font-weight: bold;
-    margin-bottom: 0.5rem;
 }
 
 h1 {
-    font-size: 4rem;
-    line-height: 5rem;
+   font-size: 2.25rem;
+
+   @media screen and (max-width: 768px) {
+       font-size: 2rem;    
+   }
+
+    @media screen and (max-width: 420px) {
+         font-size: 1.75rem;
+    }
 }
 
 h2 {
@@ -60,8 +66,15 @@ h6 {
 }
 
 p {
-    margin-bottom: 1rem;
     font-size: 1.25rem;
+
+    @media screen and (max-width: 768px) {
+        font-size: 1.125rem;
+    }
+
+    @media screen and (max-width: 420px) {
+        font-size: 1rem;
+    }
 }
 
 a {
@@ -147,6 +160,18 @@ a:hover {
     font-size: large;
     font-weight: 500;
     width: fit-content;
+    cursor: pointer;
+    &:hover {
+        background-color: #0d455f;
+    }
+
+    @media screen and (max-width: 768px) {
+        padding: 12px 20px;        
+    }
+
+    @media screen and (max-width: 420px) {
+        padding: 8px 16px;
+    }
 }
 
 #hero {
@@ -159,17 +184,18 @@ a:hover {
     /* flex-direction: column; */
     text-align: center;
     position: relative;
+    gap: 2rem;
 
     >img {
-        height: 45%;
+        height: 40%;
     }
 
     >div {
-        width: 50%;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        gap: 1rem;
 
         
     >h1 {
@@ -181,6 +207,30 @@ a:hover {
         color: #6c6d6e;
         font-weight: 500;
     }
+
+    >img{
+        display: none;
+    }
     }
 
+    /* Media breakpoints at 768px for tablet & 42px for mobile */
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        >img {
+           display: none;
+        }
+
+        >div {
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            >img{
+                display: block;
+                width: 45%;
+                /* height: 20%; */
+            }
+        }
+    }
 }
