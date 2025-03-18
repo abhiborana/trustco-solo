@@ -70,6 +70,30 @@
             </defs>
         </svg>
 
+        <!-- Add mobile menu structure -->
+        <div class="mobile-menu">
+            <ul>
+                <li>
+                    <nav><a href="#features">Features</a></nav>
+                </li>
+                <li>
+                    <nav><a href="#solutions">Solutions</a></nav>
+                </li>
+                <li>
+                    <nav><a href="#company">Company</a></nav>
+                </li>
+                <li>
+                    <nav><a href="resources">Resources</a></nav>
+                </li>
+                <li>
+                    <nav><a href="#contact">Contact</a></nav>
+                </li>
+            </ul>
+            <div class="mobile-buttons">
+                <button class="special-button-inverted">Login</button>
+                <button class="special-button">Signup</button>
+            </div>
+        </div>
     </header>
     <main>
         <section id="hero">
@@ -106,6 +130,23 @@
         </section>
     </main>
     <footer></footer>
+
+    <!-- Add JavaScript before closing body tag -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuButton = document.querySelector('header svg');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const overlay = document.querySelector('.mobile-overlay');
+
+            function toggleMenu() {
+                mobileMenu.classList.toggle('active');
+                overlay.classList.toggle('active');
+            }
+
+            menuButton.addEventListener('click', toggleMenu);
+            overlay.addEventListener('click', toggleMenu);
+        });
+    </script>
 </body>
 
 </html>
