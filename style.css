@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -147,8 +148,12 @@ a:hover {
     color: #043A53;
 }
 
+button{
+    transition: all 0.3s ease-in-out;
+}
+
 .special-button {
-    padding: 16px 24px;
+    padding: 0.5rem 1rem;
     border-radius: 2rem;
     color: white;
     background-color: #043A53;
@@ -171,6 +176,79 @@ a:hover {
 
     @media screen and (max-width: 420px) {
         padding: 8px 16px;
+    }
+}
+
+.special-button-inverted {
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    color: #043A53;
+    background-color: white;
+    border-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-size: large;
+    font-weight: 500;
+    width: fit-content;
+    cursor: pointer;
+    &:hover {
+        background-color: #f2f5f6;
+    }
+
+    @media screen and (max-width: 768px) {
+        padding: 12px 20px;        
+    }
+
+    @media screen and (max-width: 420px) {
+        padding: 8px 16px;
+    }
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    >div{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 0.5rem 2rem;
+        >img{
+            height: 1.5rem;
+        }
+        >button{
+            padding: 0.5rem 0.75rem !important;
+            font-size: 1rem !important;
+            height: fit-content;
+            width: fit-content;
+            border-radius: 25px;
+        }
+    }
+    >ul{
+        display: flex;
+        gap: 1rem;
+        >li{
+            text-decoration: none;
+            list-style: none;
+            >nav{
+                >a{
+                    text-decoration: none;
+                    font-size: 0.95rem;
+                    font-weight: 500;
+                    color: #12141D;
+                    &:active, &:hover{
+                        color: #043A53;
+                    }
+                }
+               
+            }
+        }
+    }
+    >svg{
+        display: none;
     }
 }
 
