@@ -754,3 +754,140 @@ header{
         font-size: 1.5rem;
     }
 }
+
+/* Building Bridges Section Styles */
+#building-bridges {
+    padding: 4rem 2rem;
+    background: white;
+    
+}
+
+.bridge-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.bridge-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.bridge-text h2 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    color: #12141D;
+}
+
+.bridge-text h2 span {
+    color: #6c6d6e;
+}
+
+.bridge-text p {
+    color: #6c6d6e;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.bridge-image {
+    flex: 1;
+    position: relative;
+}
+
+.bridge-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+}
+
+.award-badge {
+    position: absolute;
+    bottom: -2rem;
+    right: -2rem;
+    background: #043A53;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.badge-content {
+    color: white;
+    text-align: center;
+}
+
+.badge-content span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: block;
+    margin: 0.25rem 0;
+}
+
+.badge-content p {
+    font-size: 0.875rem;
+    line-height: 1.2;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+    .bridge-content {
+        gap: 2rem;
+    }
+
+    .bridge-text h2 {
+        font-size: 2rem;
+    }
+
+    .award-badge {
+        width: 100px;
+        height: 100px;
+        bottom: -1.5rem;
+        right: -1.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #building-bridges {
+        padding: 3rem 1rem;
+    }
+
+    .bridge-content {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .bridge-text {
+        text-align: center;
+        align-items: center;
+    }
+
+    .bridge-text h2 {
+        font-size: 1.75rem;
+    }
+
+    .bridge-text p {
+        font-size: 1rem;
+    }
+
+    .award-badge {
+        width: 80px;
+        height: 80px;
+        bottom: -1rem;
+        right: -1rem;
+    }
+
+    .badge-content span {
+        font-size: 1.25rem;
+    }
+
+    .badge-content p {
+        font-size: 0.75rem;
+    }
+}
