@@ -594,3 +594,124 @@ header{
         height: 25px;
     }
 }
+
+/* Benefits Section Styles */
+#benefits {
+    padding: 5rem 2rem;
+    background-color: white;
+    display: flex;
+    gap: 2rem;
+}
+
+.benefits-header {
+    text-align: center;
+    max-width: 30%;
+    margin: 0 auto 4rem;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    line-height: 1.2;
+    gap: 2rem;
+}
+
+.benefits-header .tag {
+    background-color: #F2F5F6;
+    color: #043A53;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-weight: 500;
+    font-size: 0.875rem;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.benefits-header h2 {
+    color: #12141D;
+    margin-bottom: 1rem;
+    font-size: 2.25rem;
+}
+
+.benefits-header p {
+    color: #6c6d6e;
+    font-size: 1.125rem;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 70%;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.benefit-card {
+    background-color: #F2F5F6;
+    padding: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.benefit-card img {
+    width: 120px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.benefit-card h3 {
+    color: #12141D;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.benefit-card p {
+    color: #6c6d6e;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #benefits {
+        padding: 3rem 1rem;
+    }
+
+    .benefits-header {
+        margin-bottom: 2rem;
+    }
+
+    .benefits-header h2 {
+        font-size: 2rem;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .benefit-card {
+        padding: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .benefits-header h2 {
+        font-size: 1.75rem;
+    }
+
+    .benefits-header p {
+        font-size: 1rem;
+    }
+
+    .benefit-card {
+        padding: 1.25rem;
+    }
+}
