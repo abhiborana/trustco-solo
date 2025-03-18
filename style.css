@@ -894,3 +894,62 @@ header{
         font-size: 0.75rem;
     }
 }
+
+/* Numbers Section Styles */
+#numbers {
+    padding: 2rem 1rem;
+    background-color: white;
+    text-align: center;
+}
+
+#numbers h2 {
+    margin-bottom: 2rem;
+    color: #12141D;
+    font-size: 1.75rem;
+}
+
+.numbers-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.number-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.number-card h3 {
+    color: #043A53;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.number-card p {
+    color: #6c6d6e;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Tablet styles */
+@media screen and (min-width: 768px) {
+    #numbers {
+        padding: 3rem 2rem;
+    }
+
+    #numbers h2 {
+        font-size: 2rem;
+    }
+
+    .number-card h3 {
+        font-size: 2.5rem;
+    }
+
+    .number-card p {
+        font-size: 1.125rem;
+    }
+}
