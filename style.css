@@ -1708,7 +1708,7 @@ p{
 /* Contact Page Styles */
 .contact-section {
     padding: 4rem 2rem;
-    background-color: white;
+    background-color: #F2F5F6;
 }
 
 .contact-section .container {
@@ -1740,7 +1740,7 @@ p{
 
 .contact-card {
     flex: 1;
-    background-color: #F2F5F6;
+    background-color: white;
     padding: 2rem;
     border-radius: 0.75rem;
     text-align: center;
@@ -1762,8 +1762,8 @@ p{
 }
 
 .card-icon img {
-    width: 30px;
-    height: 30px;
+    width: 60px;
+    height: 60px;
 }
 
 .contact-card h3 {
@@ -1824,13 +1824,20 @@ p{
 .contact-form input,
 .contact-form textarea {
     padding: 0.75rem;
-    border: 1px solid #dee2e6;
+    border: 1px solid #91A7B0;
     border-radius: 0.5rem;
     font-family: inherit;
     font-size: 1rem;
     color: #12141D;
     background-color: white;
     transition: border-color 0.3s ease;
+}
+
+/* placeholder color */
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #91A7B0;
 }
 
 .contact-form input:focus,
@@ -1855,10 +1862,43 @@ p{
     width: 20px;
     height: 20px;
     cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #F2F5F6;
+    border: 1px solid #91A7B0;
+    border-radius: 50%;
+    position: relative;
+}
+
+.terms-checkbox input[type="checkbox"]:checked {
+    background-color: #043A53;
+    border-color: #043A53;
+}
+
+.terms-checkbox input[type="checkbox"]:checked::after {
+    content: '✓';
+    position: absolute;
+    color: white;
+    font-size: 14px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .terms-checkbox label {
     cursor: pointer;
+    color: #6c6d6e;
+    font-size: 0.9rem;
+}
+
+.terms-checkbox label a {
+    color: #043A53;
+    text-decoration: none;
+}
+
+.terms-checkbox label a:hover {
+    text-decoration: underline;
 }
 
 /* Responsive Styles */
