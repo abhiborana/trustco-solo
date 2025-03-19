@@ -44,7 +44,7 @@
             </li>
             <li>
                 <nav>
-                    <a href="#contact">
+                    <a href="/contact.html">
                         Contact
                     </a>
                 </nav>
@@ -86,7 +86,7 @@
                     <nav><a href="resources">Resources</a></nav>
                 </li>
                 <li>
-                    <nav><a href="#contact">Contact</a></nav>
+                    <nav><a href="/contact.html">Contact</a></nav>
                 </li>
             </ul>
             <div class="mobile-buttons">
@@ -385,7 +385,7 @@
                     variety of data sets.</p>
                 <nav class="footer-nav">
                     <ul>
-                        <li><a href="#home">Home</a></li>
+                        <li><a href="/">Home</a></li>
                         <li><a href="#features">Features</a></li>
                         <li>
                             <a href="#solutions">Solutions</a>
@@ -398,7 +398,7 @@
                     <ul>
                         <li><a href="#about">About Us</a></li>
                         <li><a href="#company">Company</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
                         <li><a href="#career">Career</a></li>
                     </ul>
                 </nav>
@@ -430,7 +430,14 @@
         document.addEventListener('DOMContentLoaded', function () {
             const menuButton = document.querySelector('header svg');
             const mobileMenu = document.querySelector('.mobile-menu');
-            const overlay = document.querySelector('.mobile-overlay');
+
+            // Check if overlay exists or create one
+            let overlay = document.querySelector('.mobile-overlay');
+            if (!overlay) {
+                overlay = document.createElement('div');
+                overlay.className = 'mobile-overlay';
+                document.body.appendChild(overlay);
+            }
 
             function toggleMenu() {
                 mobileMenu.classList.toggle('active');
