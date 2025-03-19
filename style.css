@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 :root {
@@ -1143,6 +1144,16 @@ header{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+    @media screen and (max-width: 768px) {
+       display: flex;
+       overflow-x: auto;
+       /* hide scrollbar */
+       scrollbar-width: none;
+       -ms-overflow-style: none;
+       &::-webkit-scrollbar {
+        display: none;
+       }
+    }
 }
 
 .testimonial-card {
@@ -1152,6 +1163,9 @@ header{
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    @media screen and (max-width: 768px) {
+        min-width: 300px;
+    }
 }
 
 .testimonial-card blockquote {
