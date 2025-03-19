@@ -1591,3 +1591,42 @@ p{
 .footer-nav ul li a:hover {
     color: #043A53;
 }
+
+/* Responsive Footer Styles */
+@media screen and (max-width: 1024px) {
+    .footer-main {
+        gap: 4rem;
+    }
+
+    .footer-nav {
+        gap: 4rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    footer {
+        padding: 3rem 1.5rem;
+    }
+
+    .footer-main {
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    .footer-brand {
+        max-width: 100%;
+    }
+
+    .footer-nav {
+        /* flex-direction: column; */
+        gap: 2rem;
+    }
+
+    .footer-nav ul li {
+        margin-bottom: 0.75rem;
+    }
+
+    .social-links {
+        justify-content: flex-start;
+    }
+}
