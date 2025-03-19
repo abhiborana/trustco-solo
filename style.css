@@ -1406,3 +1406,99 @@ header{
         height: 200px;
     }
 }
+
+/* CTA Banner Section Styles */
+#cta-banner {
+    padding: 4rem 2rem 0 2rem;
+    background: #12141D;
+    overflow: hidden;
+}
+
+.cta-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+.cta-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.cta-text h2 {
+    font-size: 2.5rem;
+    color: white;
+    line-height: 1.2;
+}
+
+.cta-text p {
+    color: #ffffff75;
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+.cta-text .special-button {
+    background-color: #F0B73F;
+    color: white;
+    
+    &:hover {
+        background-color: #F0B71F;
+    }
+}
+
+.cta-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cta-image img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 1024px) {
+    .cta-text h2 {
+        font-size: 2rem;
+    }
+
+    .cta-text p {
+        font-size: 1.125rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #cta-banner {
+        padding: 3rem 1rem;
+    }
+
+    .cta-content {
+        flex-direction: column-reverse;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .cta-text {
+        align-items: center;
+    }
+
+    .cta-text h2 {
+        font-size: 1.75rem;
+    }
+
+    .cta-text p {
+        font-size: 1rem;
+    }
+
+    .cta-image img {
+        max-width: 80%;
+    }
+}
